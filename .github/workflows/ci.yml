@@ -59,6 +59,8 @@ jobs:
 
       - name: Lighthouse
         run: npm run lighthouse
+        env:
+          LHCI_MIN_PERF: '0.8'
 
       - name: Upload reports
         if: always()

@@ -126,6 +126,7 @@ Token'lar yalnızca ortam değişkenlerindedir; hiçbir dosyaya, commit'e veya r
 
 ## Kararlar
 
+- **Lighthouse eşiği.** Dört kategori için hedef ≥ 90'dır ve yerelde ile canlı adreste (mobil 95/100/93/100, masaüstü 99-100/100/93/100) sağlanır. Paylaşımlı CI işlemcileri çok yavaş olduğundan benzetimli mobil ölçüm orada dalgalanır (aynı derleme yerelde ~100, canlıda 95, CI'da ~83 aldı); bu yüzden CI'da yalnızca performans eşiği `LHCI_MIN_PERF=0.8` ile gevşetilir. Erişilebilirlik, en iyi uygulamalar ve SEO eşiği CI'da da 0.9'dur.
 - **Node 24 LTS (en az 22).** Görev Node 20+ diyordu; Node 20 bakım ömrünü Nisan 2026'da doldurdu ve test ortamı jsdom 30'un bağımlılığı (undici) Node 20'de yüklenemiyor. CI ve dağıtım Node 24 kullanır, `engines` alanı `>=22` ister.
 - **React 18 + react-router-dom 6 + vite-react-ssg.** Şablon Vite'ın React 19'unu getiriyordu; vite-react-ssg `react-router-dom@^6` ister ve görev React 18 diyor. Bu yüzden ikisi sabitlendi. Dependabot bu ikisinin ana sürüm yükseltmelerini önermez.
 - **`npm audit` iki orta şiddetli bulgu verir (react-router 6).** Biri kullanıcı kaynaklı `<Link to>` ile açık yönlendirme, diğeri SSR hata serileştirmesidir; sitede kullanıcı kaynaklı `to` yoktur ve hydration verisi sabittir. Düzeltme React Router 7 gerektirir (vite-react-ssg desteklemiyor). Yüksek/kritik bulgu yoktur; `npm run audit` bunu zorunlu kılar.
