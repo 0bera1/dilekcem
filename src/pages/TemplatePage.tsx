@@ -1,7 +1,7 @@
 import { Link, useParams } from 'react-router-dom'
 import { Seo } from '../components/Seo'
 import { Workbench } from '../components/Workbench'
-import { SITE_URL } from '../lib/site'
+import { canonicalUrl } from '../lib/site'
 import { merciById, resolveTokens } from '../templates/engine'
 import { getTemplate } from '../templates'
 import NotFound from './NotFound'
@@ -38,7 +38,7 @@ export default function TemplatePage() {
             name: def.title,
             description: def.description,
             inLanguage: 'tr-TR',
-            url: `${SITE_URL}${path}`,
+            url: canonicalUrl(path),
             step: [
               {
                 '@type': 'HowToStep',

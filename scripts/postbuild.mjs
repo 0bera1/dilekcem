@@ -71,7 +71,7 @@ const urls = htmlFiles(DIST)
 
 const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls.map((u) => `  <url><loc>${SITE}${u}</loc></url>`).join('\n')}
+${urls.map((u) => `  <url><loc>${SITE}${u.endsWith('/') ? u : `${u}/`}</loc></url>`).join('\n')}
 </urlset>
 `
 writeFileSync(join(DIST, 'sitemap.xml'), xml)

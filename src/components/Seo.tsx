@@ -1,5 +1,5 @@
 import { Head } from 'vite-react-ssg'
-import { SITE_NAME, SITE_URL } from '../lib/site'
+import { SITE_NAME, canonicalUrl } from '../lib/site'
 
 interface SeoProps {
   title: string
@@ -11,7 +11,7 @@ interface SeoProps {
 
 export function Seo({ title, description, path, jsonLd = [], noindex = false }: SeoProps) {
   const full = title === SITE_NAME ? title : `${title} | ${SITE_NAME}`
-  const url = `${SITE_URL}${path}`
+  const url = canonicalUrl(path)
   return (
     <Head>
       <title>{full}</title>

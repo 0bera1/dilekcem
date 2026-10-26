@@ -95,18 +95,27 @@ Görsel regresyon referansları platforma göre saklanır (`e2e/__screenshots__/
 
 ## Dağıtım ve DNS
 
-Site GitHub Pages üzerinde, `.github/workflows/deploy.yml` ile yayınlanır (`main` push'u veya elle tetikleme). İş akışı: lint, test, derleme, Pages artifact'ı, dağıtım ve ardından canlı adrese duman testi.
+Site **Cloudflare Pages** üzerinde (`dilekcem` projesi, `dilekcem.pages.dev`) ve `https://dilekcem.beraekimci.com.tr` adresinde yayınlanır. Statik `dist/` klasörü yüklenir; sunucu çalışmaz.
 
-1. Repo ayarlarında **Pages → Build and deployment → Source: GitHub Actions** (API ile: `build_type=workflow`).
-2. Özel alan adı: `public/CNAME` içeriği tam olarak `dilekcem.beraekimci.com.tr`. Pages ayarında aynı alan adı tanımlı olmalıdır.
-3. Cloudflare DNS: `dilekcem` adlı **CNAME** kaydı, hedef `<github-kullanıcı-adı>.github.io`, **proxy kapalı (DNS only)**, TTL otomatik.
-4. Zone'da Let's Encrypt'i engelleyen bir **CAA** kaydı olmamalıdır; yoksa GitHub sertifika alamaz.
-5. Sertifika "approved" olunca **Enforce HTTPS** açılır.
-6. İsteğe bağlı güvenlik: GitHub hesabında alan adı doğrulaması (Settings → Pages → Add a domain, TXT kaydı). Site bu adım olmadan da çalışır; adım, alan adının başkası tarafından Pages'e bağlanmasını (takeover) engeller.
+```bash
+# Token yalnızca ortam değişkeninde (Pages düzenleme izni olan bir Cloudflare API token'ı):
+export CLOUDFLARE_API_TOKEN=...     # asla bir dosyaya yazmayın
+export CLOUDFLARE_ACCOUNT_ID=...
+npm run deploy                      # derler ve wrangler ile Cloudflare Pages'e yükler
+BASE_URL=https://dilekcem.beraekimci.com.tr npm run test:e2e:smoke   # canlı duman testi
+```
 
-Cloudflare proxy (turuncu bulut) bilerek açılmaz. Açılırsa Transform Rules ile `Strict-Transport-Security`, `X-Content-Type-Options: nosniff`, `Referrer-Policy`, `Permissions-Policy` ve `Content-Security-Policy` / `frame-ancestors` başlıkları eklenebilir; ayrıca TLS modu "Full (strict)" olmalıdır.
+İlk kurulum (bir kez):
 
-Token'lar yalnızca ortam değişkenlerindedir (`CF_API_TOKEN`, `GH_TOKEN`, `GH_TOKEN_CLASSIC`); hiçbir dosyaya, commit'e veya remote URL'ye yazılmaz. CI'da Cloudflare token'ı kullanılmaz.
+1. Pages projesi: `POST /accounts/{id}/pages/projects` ile `name: dilekcem`, `production_branch: main` (doğrudan yükleme).
+2. Özel alan adı: `POST /accounts/{id}/pages/projects/dilekcem/domains` ile `dilekcem.beraekimci.com.tr`.
+3. Cloudflare DNS: `dilekcem` adlı **CNAME** kaydı, hedef `dilekcem.pages.dev`, **proxy açık**. Sertifikayı Cloudflare verir; HTTPS zorunludur (HTTP, 301 ile HTTPS'e yönlenir).
+
+Güvenlik başlıkları `public/_headers` ile gerçek HTTP başlığı olarak verilir: `Strict-Transport-Security`, `X-Content-Type-Options: nosniff`, `Referrer-Policy: no-referrer`, `Permissions-Policy`, `Content-Security-Policy: frame-ancestors 'none'`, `Cross-Origin-Opener-Policy`. Sayfaların kendi CSP'si meta etiketindedir.
+
+CI (`ci.yml`) her push ve PR'da lint, tip kontrolü, testler, derleme, Playwright, Lighthouse ve gitleaks çalıştırır. `deploy.yml` ("Live smoke") canlı siteye elle veya haftalık duman testi çalıştırır. **CI'da Cloudflare token'ı kullanılmaz.**
+
+Token'lar yalnızca ortam değişkenlerindedir; hiçbir dosyaya, commit'e veya remote URL'ye yazılmaz.
 
 ## Gizlilik ilkesi
 
@@ -121,6 +130,7 @@ Token'lar yalnızca ortam değişkenlerindedir (`CF_API_TOKEN`, `GH_TOKEN`, `GH_
 - **React 18 + react-router-dom 6 + vite-react-ssg.** Şablon Vite'ın React 19'unu getiriyordu; vite-react-ssg `react-router-dom@^6` ister ve görev React 18 diyor. Bu yüzden ikisi sabitlendi. Dependabot bu ikisinin ana sürüm yükseltmelerini önermez.
 - **`npm audit` iki orta şiddetli bulgu verir (react-router 6).** Biri kullanıcı kaynaklı `<Link to>` ile açık yönlendirme, diğeri SSR hata serileştirmesidir; sitede kullanıcı kaynaklı `to` yoktur ve hydration verisi sabittir. Düzeltme React Router 7 gerektirir (vite-react-ssg desteklemiyor). Yüksek/kritik bulgu yoktur; `npm run audit` bunu zorunlu kılar.
 - **ESLint 9.** `eslint-plugin-jsx-a11y` henüz ESLint 10'u desteklemiyor.
+- **Cloudflare Pages (GitHub Pages değil).** Görev GitHub Pages istiyordu; diğer projeleriniz Cloudflare Pages'te olduğu ve orada görünmesi istendiği için Cloudflare Pages seçildi. Böylece gerçek HTTP başlıkları (`_headers`) ve Cloudflare'in sertifikası kullanılır. `public/CNAME` GitHub Pages'e özgüdür, zararsızdır ve geri dönüş için bırakıldı. Dizin sayfaları sondaki `/` ile sunulur; canonical, `og:url`, JSON-LD ve sitemap adresleri de bu biçimdedir.
 - **Statik HTML.** Her rota derleme sırasında ön-render edilir; ayrı bir SPA yönlendirmesi gerekmez. `404` rotası da ön-render edilip `dist/404.html` olarak kopyalanır, GitHub Pages bilinmeyen yollarda bunu 404 durum koduyla sunar. `sitemap.xml` derlemenin gerçekten ürettiği sayfalardan yazılır.
 - **CSP meta etiketi.** `default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'`. `unsafe-inline` yoktur: CSS Modules ve satır içi stil kullanılmaz (kritik CSS satır içine alma kapalı). vite-react-ssg ve tema betiği sayfaya iki-üç satır içi betik koyar; bunlar derleme sonrası betikte **SHA-256 özetiyle** tek tek izinlenir (`scripts/postbuild.mjs`). Tema betiğinin satır içi olması ilk boyamada tema titremesini ve bir istek gecikmesini önler. `frame-ancestors` yönergesi meta etiketiyle etkisizdir (tarayıcılar yalnızca HTTP başlığında dikkate alır); çerçeveleme koruması için Cloudflare Transform Rules gerekir (yukarıya bakın).
 - **zod yalnızca testlerde ve betiklerde.** Veri dosyaları testlerde ve `check:data` içinde şemaya karşı doğrulanır; tarayıcı paketine zod konmaz. Taslak içe aktarma elle yazılmış katı bir doğrulayıcı kullanır.
