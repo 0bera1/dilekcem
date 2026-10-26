@@ -1,0 +1,122 @@
+.finder {
+  display: grid;
+  gap: 16px;
+  max-width: 720px;
+}
+
+.trail {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.875rem;
+}
+
+.trail li {
+  background: var(--desk);
+  border-radius: 999px;
+  padding: 3px 12px;
+  color: var(--muted);
+}
+
+.q {
+  font-size: 1.35rem;
+  margin-bottom: 12px;
+}
+
+.help {
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.options {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.option {
+  width: 100%;
+  min-height: 52px;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  text-align: left;
+  background: var(--bg);
+  border: 1px solid var(--muted);
+  border-radius: var(--r-btn);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.option:hover {
+  background: var(--desk);
+  border-color: var(--text);
+}
+
+.result {
+  display: grid;
+  gap: 10px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-left: 0;
+  border-radius: var(--r-card);
+  background: var(--desk);
+}
+
+.resultTitle {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.resultWhere {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+  align-items: center;
+}
+
+.cta {
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 0 20px;
+  border-radius: var(--r-btn);
+  background: var(--accent);
+  color: var(--on-accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.cta:hover {
+  color: var(--on-accent);
+  filter: brightness(0.93);
+}
+
+.nav {
+  display: flex;
+  gap: 8px;
+}
+
+.ghost {
+  min-height: 44px;
+  padding: 0 16px;
+  background: transparent;
+  border: 1px solid var(--muted);
+  border-radius: var(--r-btn);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.ghost:hover {
+  background: var(--desk);
+}

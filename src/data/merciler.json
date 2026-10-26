@@ -1,0 +1,382 @@
+[
+  {
+    "id": "satici-firma",
+    "ad": "Satıcı veya hizmet sağlayıcı firma",
+    "tur": "ozel",
+    "basvuruYolu": "Firmanın müşteri hizmetleri, e-posta adresi veya noter/kep üzerinden yazılı bildirim. Cayma ve ayıp bildirimlerini ispat edebileceğiniz bir yolla (KEP, noter, taahhütlü posta veya kayıtlı e-posta) yapın.",
+    "sureler": [
+      {
+        "id": "cayma",
+        "etiket": "Cayma hakkı süresi",
+        "deger": 14,
+        "birim": "gun",
+        "aciklama": "Mesafeli sözleşmelerde malın tesliminden (hizmetlerde sözleşmenin kurulmasından) itibaren 14 gün; bildirimin bu süre içinde yöneltilmiş olması yeterlidir."
+      },
+      {
+        "id": "teslim",
+        "etiket": "En geç teslim süresi",
+        "deger": 30,
+        "birim": "gun",
+        "aciklama": "Mal satışlarında teslim süresi her hâlükârda 30 günü geçemez; geçerse tüketici sözleşmeyi feshedebilir."
+      },
+      {
+        "id": "onarim",
+        "etiket": "Onarım veya değişim süresi",
+        "deger": 30,
+        "birim": "is-gunu",
+        "aciklama": "Ücretsiz onarım veya ayıpsız misli ile değiştirme talebi azami 30 iş günü içinde yerine getirilir."
+      },
+      {
+        "id": "zamanasimi",
+        "etiket": "Ayıplı mal zamanaşımı",
+        "deger": 2,
+        "birim": "yil",
+        "aciklama": "Ayıplı maldan sorumluluk, malın teslim tarihinden itibaren iki yıllık zamanaşımına tabidir."
+      }
+    ],
+    "parasalSinirlar": [],
+    "gerekliBelgeler": [
+      "Fatura veya sipariş onayı",
+      "Ürün fotoğrafı veya arıza kaydı",
+      "Önceki yazışmalar"
+    ],
+    "kaynakUrl": "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.6502.pdf",
+    "dogrulamaTarihi": "2026-10-26",
+    "verified": true,
+    "validFrom": "2014-05-28",
+    "validTo": null
+  },
+  {
+    "id": "tuketici-hakem-heyeti",
+    "ad": "İl veya ilçe tüketici hakem heyeti",
+    "tur": "kurum",
+    "basvuruYolu": "e-Devlet üzerinden Tüketici Bilgi Sistemi (TÜBİS), ya da dilekçeyle elden veya posta yoluyla tüketicinin yerleşim yerindeki ya da işlemin yapıldığı yerdeki heyete. Heyet bulunmayan ilçelerde kaymakamlığa.",
+    "web": "https://ticaret.gov.tr/tuketici/tuketici-hakem-heyetleri/tuketici-hakem-heyetlerine-iliskin-bilgilendirme-metni",
+    "sureler": [],
+    "parasalSinirlar": [
+      {
+        "id": "sinir-2026",
+        "etiket": "2026 parasal sınırı",
+        "tutarTl": 186000,
+        "aciklama": "Değeri bu tutarın altındaki uyuşmazlıklarda tüketici hakem heyetine başvuru zorunludur; bu tutar ve üzeri uyuşmazlıklar heyette karara bağlanamaz. Sınır her yıl yeniden değerleme oranıyla güncellenir."
+      }
+    ],
+    "gerekliBelgeler": [
+      "Başvuru dilekçesi",
+      "Fatura veya satış belgesi",
+      "Firmaya yapılan başvuru ve cevabı",
+      "Kimlik bilgisi"
+    ],
+    "kaynakUrl": "https://ticaret.gov.tr/tuketici/tuketici-hakem-heyetleri/tuketici-hakem-heyetlerine-iliskin-bilgilendirme-metni",
+    "dogrulamaTarihi": "2026-10-26",
+    "verified": true,
+    "validFrom": "2026-01-01",
+    "validTo": "2026-12-31",
+    "not": "Tutar her takvim yılı başında güncellenir; yeni yıl için Ticaret Bakanlığı duyurusuna bakın."
+  },
+  {
+    "id": "kargo-firmasi",
+    "ad": "Kargo veya taşıma firması",
+    "tur": "ozel",
+    "basvuruYolu": "Firmanın şube veya çağrı merkezi ile yazılı şikâyet kanalı. Hasar tespit tutanağını teslim anında ve firma görevlisi yanında düzenletmek, hasarı ispatlamayı kolaylaştırır. Sonuç alınamazsa tüketici hakem heyeti.",
+    "sureler": [],
+    "parasalSinirlar": [],
+    "gerekliBelgeler": [
+      "Gönderi takip numarası",
+      "Hasarlı paketin ve ürünün fotoğrafı",
+      "Hasar tespit tutanağı (varsa)",
+      "Ürünün fatura veya değer belgesi"
+    ],
+    "kaynakUrl": "https://ticaret.gov.tr/tuketici/tuketici-hakem-heyetleri/tuketici-hakem-heyetlerine-iliskin-bilgilendirme-metni",
+    "dogrulamaTarihi": "2026-10-26",
+    "verified": false,
+    "validFrom": "2026-01-01",
+    "validTo": null,
+    "not": "Posta ve kargo hizmetlerinde hasar bildirim süreleri ile firma sorumluluğuna ilişkin hükümler doğrulanmadı; metinde kesin süre veya madde belirtilmez."
+  },
+  {
+    "id": "banka",
+    "ad": "Banka müşteri hizmetleri ve şikâyet birimi",
+    "tur": "ozel",
+    "basvuruYolu": "Bankanın şube, çağrı merkezi, internet bankacılığı veya yazılı başvuru kanalı. Sonuç alınamazsa tüketici hakem heyeti.",
+    "sureler": [],
+    "parasalSinirlar": [],
+    "gerekliBelgeler": [
+      "Hesap ekstresi",
+      "İtiraz edilen kesintinin tarih ve tutarı",
+      "Önceki yazışmalar"
+    ],
+    "kaynakUrl": "https://ticaret.gov.tr/tuketici/tuketici-hakem-heyetleri/tuketici-hakem-heyetlerine-iliskin-bilgilendirme-metni",
+    "dogrulamaTarihi": "2026-10-26",
+    "verified": false,
+    "validFrom": "2026-01-01",
+    "validTo": null,
+    "not": "Bankanın cevap süresi ve ücret kalemlerine ilişkin düzenleme resmî kaynaktan doğrulanamadı; metinde kesin süre veya madde belirtilmez."
+  },
+  {
+    "id": "cimer",
+    "ad": "Cumhurbaşkanlığı İletişim Merkezi (CİMER)",
+    "tur": "kurum",
+    "basvuruYolu": "cimer.gov.tr üzerinden çevrim içi başvuru. Başvuru ilgili kuruma iletilir.",
+    "web": "https://www.cimer.gov.tr",
+    "sureler": [
+      {
+        "id": "cevap",
+        "etiket": "Cevap süresi",
+        "deger": 30,
+        "birim": "gun",
+        "aciklama": "Dilek ve şikâyet başvurularına en geç otuz gün içinde gerekçeli cevap verilir."
+      }
+    ],
+    "parasalSinirlar": [],
+    "gerekliBelgeler": ["Kimlik ve iletişim bilgisi", "Konuyla ilgili belgeler (varsa)"],
+    "kaynakUrl": "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.3071.pdf",
+    "dogrulamaTarihi": "2026-10-26",
+    "verified": true,
+    "validFrom": "1984-11-01",
+    "validTo": null
+  },
+  {
+    "id": "bilgi-edinme-kurumu",
+    "ad": "Bilgi istenen kamu kurumu",
+    "tur": "kurum",
+    "basvuruYolu": "Kurumun evrak servisine yazılı olarak, kurumun web sitesindeki bilgi edinme formuyla veya e-Devlet üzerinden. Cevap alınamazsa ya da ret kararına karşı Bilgi Edinme Değerlendirme Kurulu'na itiraz edilir.",
+    "sureler": [
+      {
+        "id": "cevap",
+        "etiket": "Erişim süresi",
+        "deger": 15,
+        "birim": "is-gunu",
+        "aciklama": "Bilgi veya belgeye erişim 15 iş günü içinde sağlanır; başka birimden veya kurumdan görüş gerekirse 30 iş günü."
+      },
+      {
+        "id": "cevap-uzatma",
+        "etiket": "Uzatılmış erişim süresi",
+        "deger": 30,
+        "birim": "is-gunu",
+        "aciklama": "Başka birimden veya kurumdan görüş alınması gerekirse erişim 30 iş günü içinde sağlanır; uzatma yazılı bildirilir."
+      },
+      {
+        "id": "itiraz",
+        "etiket": "Kurula itiraz süresi",
+        "deger": 15,
+        "birim": "gun",
+        "aciklama": "Ret kararının tebliğinden itibaren 15 gün içinde Bilgi Edinme Değerlendirme Kurulu'na itiraz edilebilir."
+      }
+    ],
+    "parasalSinirlar": [],
+    "gerekliBelgeler": ["Kimlik ve iletişim bilgisi", "İstenen bilgi veya belgenin açık tanımı"],
+    "kaynakUrl": "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.4982.pdf",
+    "dogrulamaTarihi": "2026-10-26",
+    "verified": true,
+    "validFrom": "2004-04-24",
+    "validTo": null
+  },
+  {
+    "id": "sulh-ceza",
+    "ad": "Sulh ceza mahkemesi veya hâkimliği (trafik idari para cezası itirazı)",
+    "tur": "mahkeme",
+    "basvuruYolu": "Cezayı veren birimin bulunduğu yerdeki sulh ceza mahkemesine veya hâkimliğine, kanuni temsilci ya da avukat tarafından dilekçeyle. Dilekçe iki nüsha verilir.",
+    "sureler": [
+      {
+        "id": "itiraz",
+        "etiket": "İtiraz süresi",
+        "deger": 15,
+        "birim": "gun",
+        "aciklama": "Kararın tebliğ veya tefhimi tarihinden itibaren en geç 15 gün; süre geçerse karar kesinleşir."
+      }
+    ],
+    "parasalSinirlar": [],
+    "gerekliBelgeler": [
+      "Ceza tutanağı veya karar örneği",
+      "Tebliğ tarihini gösteren belge",
+      "Deliller (fotoğraf, kayıt, tanık bilgisi)"
+    ],
+    "kaynakUrl": "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.5326.pdf",
+    "dogrulamaTarihi": "2026-10-26",
+    "verified": false,
+    "validFrom": "2005-03-30",
+    "validTo": null,
+    "not": "15 günlük süre kanun metninden doğrulandı. Başvurulacak mercinin güncel adı (mahkeme/hâkimlik) ve ilgili yer yargı düzenlemesine göre hukuken kontrol edilmelidir."
+  },
+  {
+    "id": "belediye",
+    "ad": "Belediye başkanlığı",
+    "tur": "kurum",
+    "basvuruYolu": "Belediyenin evrak servisi, web sitesi veya çağrı hattı; ayrıca CİMER üzerinden de iletilebilir.",
+    "sureler": [
+      {
+        "id": "cevap",
+        "etiket": "Cevap süresi",
+        "deger": 30,
+        "birim": "gun",
+        "aciklama": "Dilek ve şikâyet başvurularına en geç otuz gün içinde gerekçeli cevap verilir."
+      }
+    ],
+    "parasalSinirlar": [],
+    "gerekliBelgeler": ["Konuyu gösteren fotoğraf veya tutanak", "Konum bilgisi"],
+    "kaynakUrl": "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.3071.pdf",
+    "dogrulamaTarihi": "2026-10-26",
+    "verified": true,
+    "validFrom": "1984-11-01",
+    "validTo": null
+  },
+  {
+    "id": "veri-sorumlusu",
+    "ad": "Veri sorumlusu (kişisel verinizi işleyen kurum veya firma)",
+    "tur": "ozel",
+    "basvuruYolu": "Veri sorumlusunun aydınlatma metninde belirttiği başvuru kanalı: yazılı dilekçe, KEP veya kayıtlı elektronik posta adresi.",
+    "sureler": [
+      {
+        "id": "cevap",
+        "etiket": "Cevap süresi",
+        "deger": 30,
+        "birim": "gun",
+        "aciklama": "Veri sorumlusu başvuruyu en geç otuz gün içinde ücretsiz olarak sonuçlandırır."
+      }
+    ],
+    "parasalSinirlar": [],
+    "gerekliBelgeler": ["Kimliğinizi doğrulayacak bilgi", "Talebinizin açık tanımı"],
+    "kaynakUrl": "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.6698.pdf",
+    "dogrulamaTarihi": "2026-10-26",
+    "verified": true,
+    "validFrom": "2016-04-07",
+    "validTo": null
+  },
+  {
+    "id": "kvkk-kurulu",
+    "ad": "Kişisel Verileri Koruma Kurulu",
+    "tur": "kurum",
+    "basvuruYolu": "Önce veri sorumlusuna başvurulur. Ret, yetersiz cevap veya cevapsızlık hâlinde Kurum'un internet sitesindeki şikâyet yolu kullanılır.",
+    "web": "https://www.kvkk.gov.tr",
+    "sureler": [
+      {
+        "id": "sikayet",
+        "etiket": "Kurula şikâyet süresi",
+        "deger": 30,
+        "birim": "gun",
+        "aciklama": "Veri sorumlusunun cevabının öğrenilmesinden itibaren 30 gün."
+      },
+      {
+        "id": "sikayet-azami",
+        "etiket": "Kurula şikâyet azami süresi",
+        "deger": 60,
+        "birim": "gun",
+        "aciklama": "Her hâlde başvuru tarihinden itibaren 60 gün."
+      }
+    ],
+    "parasalSinirlar": [],
+    "gerekliBelgeler": [
+      "Veri sorumlusuna yapılan başvuru ve cevabı",
+      "Başvuru tarihini gösteren belge"
+    ],
+    "kaynakUrl": "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.6698.pdf",
+    "dogrulamaTarihi": "2026-10-26",
+    "verified": true,
+    "validFrom": "2016-04-07",
+    "validTo": null
+  },
+  {
+    "id": "ticari-ileti-gonderici",
+    "ad": "Ticari elektronik ileti gönderen hizmet sağlayıcı",
+    "tur": "ozel",
+    "basvuruYolu": "İletideki ret bağlantısı veya numarası, İleti Yönetim Sistemi (İYS) ya da firmanın müşteri hizmetleri.",
+    "web": "https://iys.org.tr",
+    "sureler": [
+      {
+        "id": "durdurma",
+        "etiket": "İleti göndermeyi durdurma süresi",
+        "deger": 3,
+        "birim": "is-gunu",
+        "aciklama": "Ret talebi ulaştıktan sonra hizmet sağlayıcı üç iş günü içinde ileti göndermeyi durdurur."
+      }
+    ],
+    "parasalSinirlar": [],
+    "gerekliBelgeler": [
+      "İletinin ekran görüntüsü veya tarihi",
+      "Telefon numarası veya e-posta adresiniz"
+    ],
+    "kaynakUrl": "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.6563.pdf",
+    "dogrulamaTarihi": "2026-10-26",
+    "verified": true,
+    "validFrom": "2015-11-01",
+    "validTo": null
+  },
+  {
+    "id": "isveren",
+    "ad": "İşveren veya insan kaynakları birimi",
+    "tur": "ozel",
+    "basvuruYolu": "İşyerine yazılı olarak, imza karşılığı teslim ya da noter/KEP ile. İş sözleşmenizdeki usule de bakın.",
+    "sureler": [
+      {
+        "id": "bildirim-2hafta",
+        "etiket": "Fesih bildirim süresi (6 aydan az kıdem)",
+        "deger": 14,
+        "birim": "gun",
+        "aciklama": "İşi altı aydan az sürmüş işçi için iki hafta."
+      },
+      {
+        "id": "bildirim-4hafta",
+        "etiket": "Fesih bildirim süresi (6 ay - 1,5 yıl)",
+        "deger": 28,
+        "birim": "gun",
+        "aciklama": "İşi altı aydan bir buçuk yıla kadar sürmüş işçi için dört hafta."
+      },
+      {
+        "id": "bildirim-6hafta",
+        "etiket": "Fesih bildirim süresi (1,5 - 3 yıl)",
+        "deger": 42,
+        "birim": "gun",
+        "aciklama": "İşi bir buçuk yıldan üç yıla kadar sürmüş işçi için altı hafta."
+      },
+      {
+        "id": "bildirim-8hafta",
+        "etiket": "Fesih bildirim süresi (3 yıldan fazla)",
+        "deger": 56,
+        "birim": "gun",
+        "aciklama": "İşi üç yıldan fazla sürmüş işçi için sekiz hafta."
+      }
+    ],
+    "parasalSinirlar": [],
+    "gerekliBelgeler": ["İş sözleşmesi (gerekirse)", "İzin için: planlanan tarih aralığı"],
+    "kaynakUrl": "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.4857.pdf",
+    "dogrulamaTarihi": "2026-10-26",
+    "verified": true,
+    "validFrom": "2003-06-10",
+    "validTo": null,
+    "not": "Süreler yasal asgari sürelerdir; iş sözleşmesi ile artırılabilir."
+  },
+  {
+    "id": "okul-idaresi",
+    "ad": "Okul veya kurum idaresi",
+    "tur": "kurum",
+    "basvuruYolu": "Okul müdürlüğü veya ilgili fakülte/yüksekokul öğrenci işleri birimi; evrak kaydı karşılığı teslim.",
+    "sureler": [],
+    "parasalSinirlar": [],
+    "gerekliBelgeler": [
+      "Mazeretin belgesi (rapor, tutanak vb.)",
+      "Öğrenci numarası veya velî bilgisi"
+    ],
+    "kaynakUrl": "https://www.meb.gov.tr",
+    "dogrulamaTarihi": "2026-10-26",
+    "verified": false,
+    "validFrom": "2026-01-01",
+    "validTo": null,
+    "not": "Devamsızlık sınırları ve mazeret bildirim süreleri kurumdan kuruma değişir; ilgili yönetmelik doğrulanmadı, metinde kesin süre belirtilmez."
+  },
+  {
+    "id": "belge-veren-kurum",
+    "ad": "Belgeyi düzenleyecek kurum veya işyeri",
+    "tur": "kurum",
+    "basvuruYolu": "Kurumun evrak servisi veya ilgili birimi. Kamu kurumlarında bilgi edinme başvurusu da kullanılabilir.",
+    "sureler": [],
+    "parasalSinirlar": [],
+    "gerekliBelgeler": ["Kimlik bilgisi", "İstenen belgenin türü ve kullanım amacı"],
+    "kaynakUrl": "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.4982.pdf",
+    "dogrulamaTarihi": "2026-10-26",
+    "verified": false,
+    "validFrom": "2026-01-01",
+    "validTo": null,
+    "not": "Özel kurum ve işyerleri için belge verme süresi doğrulanmadı; kamu kurumları için bilgi edinme süreleri geçerlidir."
+  }
+]

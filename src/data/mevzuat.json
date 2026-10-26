@@ -1,0 +1,138 @@
+[
+  {
+    "id": "tkhk-11",
+    "atif": "6502 sayılı Tüketicinin Korunması Hakkında Kanun'un 11. maddesi",
+    "ozet": "Ayıplı malda tüketicinin seçimlik hakları: sözleşmeden dönme, bedelden indirim, ücretsiz onarım, ayıpsız misli ile değiştirme. Onarım veya değişim talebi azami 30 iş günü içinde yerine getirilir.",
+    "kaynakUrl": "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.6502.pdf",
+    "dogrulamaTarihi": "2026-10-26",
+    "verified": true
+  },
+  {
+    "id": "tkhk-12",
+    "atif": "6502 sayılı Tüketicinin Korunması Hakkında Kanun'un 12. maddesi",
+    "ozet": "Ayıplı maldan sorumluluk, teslim tarihinden itibaren iki yıllık zamanaşımına tabidir.",
+    "kaynakUrl": "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.6502.pdf",
+    "dogrulamaTarihi": "2026-10-26",
+    "verified": true
+  },
+  {
+    "id": "tkhk-48",
+    "atif": "6502 sayılı Tüketicinin Korunması Hakkında Kanun'un 48. maddesi",
+    "ozet": "Mesafeli sözleşmelerde 14 gün içinde gerekçe göstermeden cayma hakkı; mal satışlarında teslim süresi her hâlükârda 30 günü geçemez, aksi hâlde tüketici sözleşmeyi feshedebilir.",
+    "kaynakUrl": "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.6502.pdf",
+    "dogrulamaTarihi": "2026-10-26",
+    "verified": true
+  },
+  {
+    "id": "tkhk-68",
+    "atif": "6502 sayılı Tüketicinin Korunması Hakkında Kanun'un 68. maddesi",
+    "ozet": "Parasal sınırın altındaki uyuşmazlıklarda tüketici hakem heyetine başvuru zorunludur; başvuru, yerleşim yerindeki veya işlemin yapıldığı yerdeki heyete yapılır.",
+    "kaynakUrl": "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.6502.pdf",
+    "dogrulamaTarihi": "2026-10-26",
+    "verified": true
+  },
+  {
+    "id": "kvkk-7",
+    "atif": "6698 sayılı Kişisel Verilerin Korunması Kanunu'nun 7. maddesi",
+    "ozet": "İşlenmesini gerektiren sebepler ortadan kalkarsa kişisel veriler resen veya ilgili kişinin talebi üzerine silinir, yok edilir veya anonim hâle getirilir.",
+    "kaynakUrl": "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.6698.pdf",
+    "dogrulamaTarihi": "2026-10-26",
+    "verified": true
+  },
+  {
+    "id": "kvkk-11",
+    "atif": "6698 sayılı Kişisel Verilerin Korunması Kanunu'nun 11. maddesi",
+    "ozet": "İlgili kişinin hakları: işlenip işlenmediğini öğrenme, bilgi talep etme, düzeltme ve silme isteme, aktarıldığı üçüncü kişileri bilme.",
+    "kaynakUrl": "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.6698.pdf",
+    "dogrulamaTarihi": "2026-10-26",
+    "verified": true
+  },
+  {
+    "id": "kvkk-13",
+    "atif": "6698 sayılı Kişisel Verilerin Korunması Kanunu'nun 13. maddesi",
+    "ozet": "Veri sorumlusu başvuruyu en geç otuz gün içinde ücretsiz olarak sonuçlandırır.",
+    "kaynakUrl": "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.6698.pdf",
+    "dogrulamaTarihi": "2026-10-26",
+    "verified": true
+  },
+  {
+    "id": "kvkk-14",
+    "atif": "6698 sayılı Kişisel Verilerin Korunması Kanunu'nun 14. maddesi",
+    "ozet": "Başvuru reddedilir, cevap yetersiz bulunur veya süresinde cevap verilmezse, cevabın öğrenilmesinden itibaren 30, her hâlde başvurudan itibaren 60 gün içinde Kurula şikâyet edilebilir.",
+    "kaynakUrl": "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.6698.pdf",
+    "dogrulamaTarihi": "2026-10-26",
+    "verified": true
+  },
+  {
+    "id": "bilgi-edinme-4",
+    "atif": "4982 sayılı Bilgi Edinme Hakkı Kanunu'nun 4. maddesi",
+    "ozet": "Herkes bilgi edinme hakkına sahiptir.",
+    "kaynakUrl": "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.4982.pdf",
+    "dogrulamaTarihi": "2026-10-26",
+    "verified": true
+  },
+  {
+    "id": "bilgi-edinme-11",
+    "atif": "4982 sayılı Bilgi Edinme Hakkı Kanunu'nun 11. maddesi",
+    "ozet": "Kurumlar istenen bilgi veya belgeye erişimi on beş iş günü içinde sağlar; başka birimden veya kurumdan görüş alınması gereken hâllerde süre otuz iş günüdür.",
+    "kaynakUrl": "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.4982.pdf",
+    "dogrulamaTarihi": "2026-10-26",
+    "verified": true
+  },
+  {
+    "id": "bilgi-edinme-13",
+    "atif": "4982 sayılı Bilgi Edinme Hakkı Kanunu'nun 13. maddesi",
+    "ozet": "Başvurusu reddedilen kişi, kararın tebliğinden itibaren on beş gün içinde Bilgi Edinme Değerlendirme Kurulu'na itiraz edebilir.",
+    "kaynakUrl": "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.4982.pdf",
+    "dogrulamaTarihi": "2026-10-26",
+    "verified": true
+  },
+  {
+    "id": "dilekce-hakki-7",
+    "atif": "3071 sayılı Dilekçe Hakkının Kullanılmasına Dair Kanun'un 7. maddesi",
+    "ozet": "Dilek ve şikâyet başvurularının sonucu veya işlemin safahatı hakkında dilekçe sahibine en geç otuz gün içinde gerekçeli olarak cevap verilir.",
+    "kaynakUrl": "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.3071.pdf",
+    "dogrulamaTarihi": "2026-10-26",
+    "verified": true
+  },
+  {
+    "id": "kabahatler-27",
+    "atif": "5326 sayılı Kabahatler Kanunu'nun 27. maddesi",
+    "ozet": "İdari para cezasına karşı kararın tebliğinden itibaren en geç on beş gün içinde sulh ceza mahkemesine başvurulabilir; süre geçirilirse karar kesinleşir.",
+    "kaynakUrl": "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.5326.pdf",
+    "dogrulamaTarihi": "2026-10-26",
+    "verified": true
+  },
+  {
+    "id": "eticaret-6",
+    "atif": "6563 sayılı Elektronik Ticaretin Düzenlenmesi Hakkında Kanun'un 6. maddesi",
+    "ozet": "Ticari elektronik iletiler alıcılara ancak önceden onayları alınmak kaydıyla gönderilebilir.",
+    "kaynakUrl": "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.6563.pdf",
+    "dogrulamaTarihi": "2026-10-26",
+    "verified": true
+  },
+  {
+    "id": "eticaret-8",
+    "atif": "6563 sayılı Elektronik Ticaretin Düzenlenmesi Hakkında Kanun'un 8. maddesi",
+    "ozet": "Alıcılar diledikleri zaman, gerekçe belirtmeksizin ticari elektronik iletileri almayı reddedebilir; hizmet sağlayıcı talebin ulaşmasından sonra üç iş günü içinde ileti göndermeyi durdurur.",
+    "kaynakUrl": "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.6563.pdf",
+    "dogrulamaTarihi": "2026-10-26",
+    "verified": true
+  },
+  {
+    "id": "is-kanunu-17",
+    "atif": "4857 sayılı İş Kanunu'nun 17. maddesi",
+    "ozet": "Belirsiz süreli iş sözleşmelerinde fesih bildirim süreleri kıdeme göre 2, 4, 6 veya 8 haftadır; süreler asgaridir.",
+    "kaynakUrl": "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.4857.pdf",
+    "dogrulamaTarihi": "2026-10-26",
+    "verified": true
+  },
+  {
+    "id": "is-kanunu-53",
+    "atif": "4857 sayılı İş Kanunu'nun 53. maddesi",
+    "ozet": "En az bir yıl çalışmış işçilere yıllık ücretli izin verilir; süre hizmet yılına göre 14, 20 veya 26 günden az olamaz.",
+    "kaynakUrl": "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.4857.pdf",
+    "dogrulamaTarihi": "2026-10-26",
+    "verified": true
+  }
+]

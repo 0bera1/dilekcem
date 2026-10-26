@@ -1,0 +1,6 @@
+dist
+node_modules
+public/fonts
+package-lock.json
+e2e/__screenshots__
+.lighthouseci

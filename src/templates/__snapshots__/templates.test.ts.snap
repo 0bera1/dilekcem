@@ -1,0 +1,625 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`template abonelik-iptali > matches the snapshot for sample data 1`] = `
+"10 Mart 2026
+
+ÖRNEK FİRMA ADI
+Müşteri Hizmetleri / Abonelik Birimi
+
+Konu: Abonelik iptali talebi (Abone no: Örnek Abone veya müşteri numarası)
+
+Firmanız nezdindeki aşağıda bilgileri yazılı aboneliğimi sona erdirmek istiyorum.
+Hizmet: Örnek İptal edilecek hizmet
+Abone numarası: Örnek Abone veya müşteri numarası
+
+Aboneliğimin 10 Mart 2026 tarihi itibarıyla iptal edilmesini talep ederim.
+
+Bu tarihten sonra adıma fatura düzenlenmemesini, tanımlı otomatik ödeme talimatı varsa durdurulmasını rica ederim.
+
+İptal işleminin tamamlandığını, işlem tarihi ile birlikte yazılı olarak (e-posta veya mesajla) bana bildirmenizi rica ederim.
+
+Saygılarımla,
+Ayşe Yılmaz
+
+T.C. Kimlik No: 10000000146
+Adres: Örnek Mah. Deneme Sok. No: 5 Çankaya / Ankara
+Telefon: 0532 123 45 67
+E-posta: ayse@ornek.com
+
+Ekler:
+1. Son faturanın bir örneği
+
+Not: Bu metin örnektir; durumunuza göre uyarlayın, gerekirse avukata danışın."
+`;
+
+exports[`template ayipli-urun > matches the snapshot for sample data 1`] = `
+"10 Mart 2026
+
+ÖRNEK SATICI FİRMA ADI
+Müşteri Hizmetleri
+
+Konu: Ayıplı ürün hakkında talep (Fatura/sipariş no: Örnek Fatura veya sipariş numarası)
+
+10 Mart 2026 tarihinde teslim aldığım ürünün ayıplı olduğunu tespit ettim.
+Ürün: Örnek Ürün adı ve modeli
+
+Ayıbın niteliği şöyledir:
+
+Birinci paragraf: şikâyet konusu ığüşöçİ karakterleriyle yazıldı.
+
+İkinci paragraf: talep açıklaması.
+
+6502 sayılı Tüketicinin Korunması Hakkında Kanun'un 11. maddesi uyarınca seçimlik hakkım olarak şu talepte bulunuyorum: ürünün ücretsiz onarılması.
+
+Bu talebin, kanunda öngörülen azami 30 iş günü içinde yerine getirilmesini rica ederim.
+
+Talebimin karşılanmaması hâlinde tüketici hakem heyetine veya tüketici mahkemesine başvuracağımı bilgilerinize sunarım.
+
+Saygılarımla,
+Ayşe Yılmaz
+
+T.C. Kimlik No: 10000000146
+Adres: Örnek Mah. Deneme Sok. No: 5 Çankaya / Ankara
+Telefon: 0532 123 45 67
+E-posta: ayse@ornek.com
+
+Ekler:
+1. Fatura veya satış belgesi
+2. Ayıbı gösteren fotoğraf veya kayıtlar
+
+Not: Bu metin örnektir; durumunuza göre uyarlayın, gerekirse avukata danışın."
+`;
+
+exports[`template banka-ucret-itirazi > matches the snapshot for sample data 1`] = `
+"10 Mart 2026
+
+ÖRNEK BANKA ADI
+Müşteri İlişkileri / Şikâyet Yönetimi
+
+Konu: Örnek Kesintinin adı kesintisine itiraz ve iade talebi
+
+10 Mart 2026 tarihinde bankanız nezdindeki (son 4 hane: Örnek Hesap veya kart (son 4 hane)) hesabımdan/kartımdan "Örnek Kesintinin adı" adı altında 1.250 TL tahsil edilmiştir.
+
+Bu kesintiye şu nedenle itiraz ediyorum:
+
+Birinci paragraf: şikâyet konusu ığüşöçİ karakterleriyle yazıldı.
+
+İkinci paragraf: talep açıklaması.
+
+Söz konusu kesintinin dayanağının (sözleşme maddesi ve hesaplama yöntemi) yazılı olarak açıklanmasını, hukuki dayanağı yoksa tahsil edilen tutarın hesabıma iade edilmesini talep ederim.
+
+Başvurumun sonucunun yazılı olarak tarafıma bildirilmesini rica ederim. Talebimin karşılanmaması hâlinde tüketici hakem heyetine veya tüketici mahkemesine başvuracağımı bilgilerinize sunarım.
+
+Saygılarımla,
+Ayşe Yılmaz
+
+T.C. Kimlik No: 10000000146
+Adres: Örnek Mah. Deneme Sok. No: 5 Çankaya / Ankara
+Telefon: 0532 123 45 67
+E-posta: ayse@ornek.com
+
+Ekler:
+1. Hesap ekstresi veya kart ekstresi
+2. Varsa bankayla önceki yazışmalar
+
+Not: Bu metin örnektir; durumunuza göre uyarlayın, gerekirse avukata danışın."
+`;
+
+exports[`template belediye-sikayeti > matches the snapshot for sample data 1`] = `
+"10 Mart 2026
+
+ÖRNEK BELEDİYE ADI
+
+Konu: Temizlik ve çöp toplama konusunda şikâyet ve talep
+
+Örnek Sorunun yaşandığı konum adresinde 10 Mart 2026 tarihinden bu yana aşağıdaki sorun devam etmektedir.
+
+Birinci paragraf: şikâyet konusu ığüşöçİ karakterleriyle yazıldı.
+
+İkinci paragraf: talep açıklaması.
+
+Talebim:
+
+Birinci paragraf: şikâyet konusu ığüşöçİ karakterleriyle yazıldı.
+
+İkinci paragraf: talep açıklaması.
+
+Konunun incelenmesini, gerekli işlemin yapılmasını ve 3071 sayılı Dilekçe Hakkının Kullanılmasına Dair Kanun'un 7. maddesi gereğince sonucun tarafıma yazılı olarak bildirilmesini saygılarımla arz ederim.
+
+Saygılarımla,
+Ayşe Yılmaz
+
+T.C. Kimlik No: 10000000146
+Adres: Örnek Mah. Deneme Sok. No: 5 Çankaya / Ankara
+Telefon: 0532 123 45 67
+E-posta: ayse@ornek.com
+
+Ekler:
+1. Sorunu gösteren fotoğraf veya videolar (varsa)
+
+Not: Bu metin örnektir; durumunuza göre uyarlayın, gerekirse avukata danışın."
+`;
+
+exports[`template belge-talebi > matches the snapshot for sample data 1`] = `
+"10 Mart 2026
+
+ÖRNEK BELGEYİ VERECEK KURUM VEYA İŞYERİ
+
+Konu: Örnek İstenen belge talebi
+
+Kurumunuz nezdindeki kaydıma dayanarak aşağıdaki belgenin düzenlenmesini talep ediyorum.
+İstenen belge: Örnek İstenen belge
+Kullanım amacı: Örnek Belgenin kullanılacağı yer
+
+Belgenin elden teslim suretiyle tarafıma ulaştırılmasını rica ederim.
+
+Talebimin değerlendirilerek gereğinin yapılmasını arz ederim.
+
+Saygılarımla,
+Ayşe Yılmaz
+
+T.C. Kimlik No: 10000000146
+Adres: Örnek Mah. Deneme Sok. No: 5 Çankaya / Ankara
+Telefon: 0532 123 45 67
+E-posta: ayse@ornek.com
+
+Ekler:
+1. Kimlik fotokopisi
+
+Not: Bu metin örnektir; durumunuza göre uyarlayın, gerekirse avukata danışın."
+`;
+
+exports[`template bilgi-edinme-basvurusu > matches the snapshot for sample data 1`] = `
+"10 Mart 2026
+
+ÖRNEK KURUM ADI
+Bilgi Edinme Birimi
+
+Konu: Bilgi edinme başvurusu
+
+4982 sayılı Bilgi Edinme Hakkı Kanunu'nun 4. maddesi kapsamında aşağıdaki bilgi/belgelere erişmek istiyorum:
+
+Birinci paragraf: şikâyet konusu ığüşöçİ karakterleriyle yazıldı.
+
+İkinci paragraf: talep açıklaması.
+
+Gerekçe:
+
+Birinci paragraf: şikâyet konusu ığüşöçİ karakterleriyle yazıldı.
+
+İkinci paragraf: talep açıklaması.
+
+İstenen bilgi veya belgenin e-posta ile tarafıma ulaştırılmasını talep ederim.
+
+4982 sayılı Bilgi Edinme Hakkı Kanunu'nun 11. maddesi uyarınca başvurumun 15 iş günü içinde sonuçlandırılmasını, başvurunun reddi hâlinde gerekçeli yazılı cevap verilmesini ve itiraz yolunun bildirilmesini arz ederim.
+
+Saygılarımla,
+Ayşe Yılmaz
+
+T.C. Kimlik No: 10000000146
+Adres: Örnek Mah. Deneme Sok. No: 5 Çankaya / Ankara
+Telefon: 0532 123 45 67
+E-posta: ayse@ornek.com
+
+Not: Bu metin örnektir; durumunuza göre uyarlayın, gerekirse avukata danışın."
+`;
+
+exports[`template cimer-basvurusu > matches the snapshot for sample data 1`] = `
+"10 Mart 2026
+
+CUMHURBAŞKANLIĞI İLETİŞİM MERKEZİ (CİMER)
+İlgili kurum: ÖRNEK BAŞVURUNUN İLGİLİ OLDUĞU KURUM
+
+Konu: Örnek Başvuru başlığı
+
+10 Mart 2026 tarihinde yaşanan konuyla ilgili başvuruda bulunuyorum.
+
+Birinci paragraf: şikâyet konusu ığüşöçİ karakterleriyle yazıldı.
+
+İkinci paragraf: talep açıklaması.
+
+Talebim:
+
+Birinci paragraf: şikâyet konusu ığüşöçİ karakterleriyle yazıldı.
+
+İkinci paragraf: talep açıklaması.
+
+Başvurumun ilgili kuruma iletilerek incelenmesini ve 3071 sayılı Dilekçe Hakkının Kullanılmasına Dair Kanun'un 7. maddesi gereğince sonucun tarafıma bildirilmesini arz ederim.
+
+Saygılarımla,
+Ayşe Yılmaz
+
+T.C. Kimlik No: 10000000146
+Adres: Örnek Mah. Deneme Sok. No: 5 Çankaya / Ankara
+Telefon: 0532 123 45 67
+E-posta: ayse@ornek.com
+
+Ekler:
+1. Konuyla ilgili belge, fotoğraf veya yazışmalar (varsa)
+
+Not: Bu metin örnektir; durumunuza göre uyarlayın, gerekirse avukata danışın."
+`;
+
+exports[`template gec-teslimat > matches the snapshot for sample data 1`] = `
+"10 Mart 2026
+
+ÖRNEK SATICI FİRMA ADI
+Müşteri Hizmetleri
+
+Konu: Geç teslimat (Sipariş no: Örnek Sipariş numarası)
+
+10 Mart 2026 tarihinde firmanızdan sipariş verdim ve ödemesini yaptım.
+Ürün: Örnek Sipariş edilen ürün
+
+Siparişin 10 Mart 2026 tarihinde teslim edilmesi taahhüt edilmiş olmasına rağmen ürün bugüne kadar bana ulaşmamıştır.
+
+6502 sayılı Tüketicinin Korunması Hakkında Kanun'un 48. maddesi uyarınca mal satışlarında teslim süresi, her hâlükârda 30 gün ile sınırlıdır; bu süre içinde edimini yerine getirmeyen satıcıya karşı tüketici sözleşmeyi feshedebilir.
+
+Bu nedenle siparişimin en kısa sürede teslim edilmesini talep ederim.
+
+Talebimin yerine getirilmemesi hâlinde tüketici hakem heyetine veya tüketici mahkemesine başvuracağımı bilgilerinize sunarım.
+
+Saygılarımla,
+Ayşe Yılmaz
+
+T.C. Kimlik No: 10000000146
+Adres: Örnek Mah. Deneme Sok. No: 5 Çankaya / Ankara
+Telefon: 0532 123 45 67
+E-posta: ayse@ornek.com
+
+Ekler:
+1. Sipariş onayı ve ödeme belgesi
+
+Not: Bu metin örnektir; durumunuza göre uyarlayın, gerekirse avukata danışın."
+`;
+
+exports[`template istifa-dilekcesi > matches the snapshot for sample data 1`] = `
+"10 Mart 2026
+
+ÖRNEK İŞVEREN VEYA İŞYERİ ADI
+İnsan Kaynakları / İşveren Vekilliği
+
+Konu: İstifa bildirimi
+
+Firmanızda Örnek Göreviniz olarak 10 Mart 2026 tarihinden bu yana görev yapmaktayım.
+
+Kendi isteğimle iş sözleşmemi sona erdirmek istiyorum. Son çalışma günüm 10 Mart 2026 olacaktır.
+
+4857 sayılı İş Kanunu'nun 17. maddesi uyarınca belirsiz süreli iş sözleşmelerinde bildirim süresine uyulması gerekir; bu süreye uygun davranacağım ve devam eden işlerimi düzenli biçimde devredeceğim.
+
+İş sözleşmem sona ererken ödenmemiş ücret, kullanılmamış yıllık izin ücreti ve diğer yasal haklarımın hesaplanarak ödenmesini, çalışma belgemin verilmesini talep ederim.
+
+Bugüne kadar sağlanan imkânlar için teşekkür ederim.
+
+Saygılarımla,
+Ayşe Yılmaz
+
+T.C. Kimlik No: 10000000146
+Adres: Örnek Mah. Deneme Sok. No: 5 Çankaya / Ankara
+Telefon: 0532 123 45 67
+E-posta: ayse@ornek.com
+
+Not: Bu metin örnektir; durumunuza göre uyarlayın, gerekirse avukata danışın."
+`;
+
+exports[`template izin-talebi > matches the snapshot for sample data 1`] = `
+"10 Mart 2026
+
+ÖRNEK İŞVEREN VEYA BİRİM
+
+Konu: Yıllık ücretli izin talebi
+
+Örnek Göreviniz olarak görev yapmaktayım. 10 Mart 2026 ile 10 Mart 2026 tarihleri arasında yıllık ücretli izin kullanmak istiyorum. İzin bitiminde 10 Mart 2026 tarihinde göreve başlayacağım.
+
+Talebim, 4857 sayılı İş Kanunu'nun 53. maddesi kapsamındaki yıllık ücretli izin hakkıma dayanmaktadır.
+
+Birinci paragraf: şikâyet konusu ığüşöçİ karakterleriyle yazıldı.
+
+İkinci paragraf: talep açıklaması.
+
+İzin talebimin uygun görülerek onaylanmasını, devam eden işlerimin izin süresince aksamaması için gerekli devir-teslimi yapacağımı bildirir, gereğini arz ederim.
+
+Saygılarımla,
+Ayşe Yılmaz
+
+T.C. Kimlik No: 10000000146
+Adres: Örnek Mah. Deneme Sok. No: 5 Çankaya / Ankara
+Telefon: 0532 123 45 67
+E-posta: ayse@ornek.com
+
+Not: Bu metin örnektir; durumunuza göre uyarlayın, gerekirse avukata danışın."
+`;
+
+exports[`template kargo-hasari > matches the snapshot for sample data 1`] = `
+"10 Mart 2026
+
+ÖRNEK KARGO FİRMASI
+Müşteri Hizmetleri / Hasar Birimi
+
+Konu: Gönderi zararı hakkında talep (Takip no: Örnek Gönderi takip numarası)
+
+Takip numarası Örnek Gönderi takip numarası olan gönderiye ilişkin başvuruda bulunuyorum.
+Gönderinin içeriği: Örnek Gönderinin içeriği
+Gönderi tarihi: 10 Mart 2026
+Teslim tarihi: 10 Mart 2026
+
+Gönderide meydana gelen zarar şöyledir:
+
+Birinci paragraf: şikâyet konusu ığüşöçİ karakterleriyle yazıldı.
+
+İkinci paragraf: talep açıklaması.
+
+Teslim sırasında hasar tespit tutanağı düzenlenmiştir; tutanak ektedir.
+
+Gönderinin değeri 1.250 TL olup, uğradığım zararın bu tutar üzerinden tazmin edilmesini talep ederim.
+
+Başvurumun incelenmesini ve sonucun yazılı olarak bildirilmesini rica ederim. Sonuç alınamaması hâlinde yasal yollara başvuracağımı bilgilerinize sunarım.
+
+Saygılarımla,
+Ayşe Yılmaz
+
+T.C. Kimlik No: 10000000146
+Adres: Örnek Mah. Deneme Sok. No: 5 Çankaya / Ankara
+Telefon: 0532 123 45 67
+E-posta: ayse@ornek.com
+
+Ekler:
+1. Hasarlı gönderinin ve ambalajın fotoğrafları
+2. Ürünün fatura veya değer belgesi
+3. Gönderi takip kaydı
+
+Not: Bu metin örnektir; durumunuza göre uyarlayın, gerekirse avukata danışın."
+`;
+
+exports[`template kvkk-bilgi-talebi > matches the snapshot for sample data 1`] = `
+"10 Mart 2026
+
+ÖRNEK VERİ SORUMLUSU (KURUM VEYA FİRMA)
+Veri Sorumlusu / Kişisel Verileri Koruma Birimi
+
+Konu: Kişisel verilerle ilgili bilgi talebi
+
+6698 sayılı Kişisel Verilerin Korunması Kanunu'nun 11. maddesi uyarınca ilgili kişi sıfatıyla başvuruyorum.
+Sizinle ilişkilendirilebilecek bilgi: Örnek Sizi tanımlayan bilgi
+
+Aşağıdaki hususlarda yazılı bilgi verilmesini talep ederim:
+
+a) Hakkımda kişisel veri işlenip işlenmediği,
+b) İşleniyorsa hangi kişisel verilerimin işlendiği ve işlenme amacı, amacına uygun kullanılıp kullanılmadığı,
+c) Verilerimin yurt içinde veya yurt dışında aktarıldığı üçüncü kişiler,
+ç) Eksik veya yanlış işlenen veri varsa bunların düzeltilmesi.
+
+Ek talebim:
+
+Birinci paragraf: şikâyet konusu ığüşöçİ karakterleriyle yazıldı.
+
+İkinci paragraf: talep açıklaması.
+
+6698 sayılı Kişisel Verilerin Korunması Kanunu'nun 13. maddesi uyarınca başvurumun en geç 30 gün içinde ücretsiz olarak sonuçlandırılmasını, cevabın yazılı veya elektronik ortamda bildirilmesini arz ederim.
+
+Saygılarımla,
+Ayşe Yılmaz
+
+T.C. Kimlik No: 10000000146
+Adres: Örnek Mah. Deneme Sok. No: 5 Çankaya / Ankara
+Telefon: 0532 123 45 67
+E-posta: ayse@ornek.com
+
+Not: Bu metin örnektir; durumunuza göre uyarlayın, gerekirse avukata danışın."
+`;
+
+exports[`template kvkk-silme-yok-etme-talebi > matches the snapshot for sample data 1`] = `
+"10 Mart 2026
+
+ÖRNEK VERİ SORUMLUSU (KURUM VEYA FİRMA)
+Veri Sorumlusu / Kişisel Verileri Koruma Birimi
+
+Konu: Kişisel verilerin silinmesi, yok edilmesi veya anonim hâle getirilmesi talebi
+
+6698 sayılı Kişisel Verilerin Korunması Kanunu'nun 11. maddesi ve 6698 sayılı Kişisel Verilerin Korunması Kanunu'nun 7. maddesi uyarınca ilgili kişi sıfatıyla başvuruyorum.
+Sizinle ilişkilendirilebilecek bilgi: Örnek Sizi tanımlayan bilgi
+
+Silinmesini/yok edilmesini istediğim kişisel veriler:
+
+Birinci paragraf: şikâyet konusu ığüşöçİ karakterleriyle yazıldı.
+
+İkinci paragraf: talep açıklaması.
+
+Talebimin gerekçesi:
+
+Birinci paragraf: şikâyet konusu ığüşöçİ karakterleriyle yazıldı.
+
+İkinci paragraf: talep açıklaması.
+
+Verilerimin kanunda öngörülen şekilde silinmesini, yok edilmesini veya anonim hâle getirilmesini; bu verilerin aktarıldığı üçüncü kişilere de durumun bildirilmesini talep ederim. Saklanmasını gerektiren bir kanuni yükümlülük varsa hangi verilerin hangi dayanakla saklanacağının gerekçesiyle bildirilmesini rica ederim.
+
+6698 sayılı Kişisel Verilerin Korunması Kanunu'nun 13. maddesi uyarınca başvurumun en geç 30 gün içinde ücretsiz olarak sonuçlandırılmasını arz ederim.
+
+Saygılarımla,
+Ayşe Yılmaz
+
+T.C. Kimlik No: 10000000146
+Adres: Örnek Mah. Deneme Sok. No: 5 Çankaya / Ankara
+Telefon: 0532 123 45 67
+E-posta: ayse@ornek.com
+
+Not: Bu metin örnektir; durumunuza göre uyarlayın, gerekirse avukata danışın."
+`;
+
+exports[`template mazeret-dilekcesi > matches the snapshot for sample data 1`] = `
+"10 Mart 2026
+
+ÖRNEK OKUL VEYA FAKÜLTE ADI
+Müdürlüğüne / Dekanlığına
+
+Konu: Mazeretin kabulü talebi
+
+Örnek Sınıf veya bölüm (Öğrenci no: Örnek Öğrenci numarası) öğrencisiyim.
+
+10 Mart 2026 ile 10 Mart 2026 tarihleri arasında aşağıda açıklanan mazeretim nedeniyle derslere/sınavlara katılamadım.
+
+Birinci paragraf: şikâyet konusu ığüşöçİ karakterleriyle yazıldı.
+
+İkinci paragraf: talep açıklaması.
+
+Mazeretimin kabul edilerek devamsızlığımın bu doğrultuda değerlendirilmesini ve varsa mazeret sınavı veya ödev teslimi için hak tanınmasını saygılarımla arz ederim.
+
+Saygılarımla,
+Ayşe Yılmaz
+
+T.C. Kimlik No: 10000000146
+Adres: Örnek Mah. Deneme Sok. No: 5 Çankaya / Ankara
+Telefon: 0532 123 45 67
+E-posta: ayse@ornek.com
+
+Ekler:
+1. Örnek Ekteki belge
+
+Not: Bu metin örnektir; durumunuza göre uyarlayın, gerekirse avukata danışın."
+`;
+
+exports[`template ticari-ileti-onay-geri-cekme > matches the snapshot for sample data 1`] = `
+"10 Mart 2026
+
+ÖRNEK MESAJ GÖNDEREN FİRMA
+Müşteri İlişkileri
+
+Konu: Ticari elektronik ileti onayının geri çekilmesi
+
+Firmanızdan kısa mesaj (sms) yoluyla ticari elektronik ileti almaktayım.
+İletilerin ulaştığı adres/numara: Örnek İletilerin ulaştığı telefon veya e-posta
+Son aldığım iletinin tarihi: 10 Mart 2026
+
+6563 sayılı Elektronik Ticaretin Düzenlenmesi Hakkında Kanun'un 6. maddesi uyarınca ticari elektronik iletiler önceden onay alınarak gönderilebilir. Daha önce verdiğim onay varsa bu yazı ile geri çektiğimi, bundan sonra adıma ve yukarıdaki adres/numaraya ticari elektronik ileti gönderilmemesini talep ederim.
+
+6563 sayılı Elektronik Ticaretin Düzenlenmesi Hakkında Kanun'un 8. maddesi uyarınca talebimin ulaşmasından itibaren 3 iş günü içinde ileti gönderiminin durdurulmasını ve İleti Yönetim Sistemi'ndeki kaydımın buna göre güncellenmesini rica ederim.
+
+Talebimin yerine getirildiğinin yazılı olarak bildirilmesini arz ederim.
+
+Saygılarımla,
+Ayşe Yılmaz
+
+T.C. Kimlik No: 10000000146
+Adres: Örnek Mah. Deneme Sok. No: 5 Çankaya / Ankara
+Telefon: 0532 123 45 67
+E-posta: ayse@ornek.com
+
+Ekler:
+1. Alınan iletinin ekran görüntüsü (varsa)
+
+Not: Bu metin örnektir; durumunuza göre uyarlayın, gerekirse avukata danışın."
+`;
+
+exports[`template trafik-cezasi-itirazi > matches the snapshot for sample data 1`] = `
+"10 Mart 2026
+
+ÖRNEK MAHKEME VEYA HÂKİMLİK ADI
+
+Konu: Örnek Ceza tutanak veya karar numarası sayılı idari para cezasına itiraz
+
+İtiraz eden: Ayşe Yılmaz
+İtiraza konu karar: Örnek Cezayı veren birim tarafından 10 Mart 2026 tarihinde düzenlenen Örnek Ceza tutanak veya karar numarası numaralı trafik idari para cezası (Araç plakası: 06 ABC 123).
+
+Karar tarafıma 10 Mart 2026 tarihinde tebliğ edilmiştir. 5326 sayılı Kabahatler Kanunu'nun 27. maddesi uyarınca tebliğden itibaren 15 gün içinde yapılan bu başvuru süresindedir.
+
+İtiraz gerekçelerim şunlardır:
+
+Birinci paragraf: şikâyet konusu ığüşöçİ karakterleriyle yazıldı.
+
+İkinci paragraf: talep açıklaması.
+
+Yukarıda açıklanan nedenlerle idari para cezasının iptaline, bu mümkün olmazsa cezanın hukuka uygun hâle getirilmesine karar verilmesini saygılarımla arz ve talep ederim.
+
+Saygılarımla,
+Ayşe Yılmaz
+
+T.C. Kimlik No: 10000000146
+Adres: Örnek Mah. Deneme Sok. No: 5 Çankaya / Ankara
+Telefon: 0532 123 45 67
+E-posta: ayse@ornek.com
+
+Ekler:
+1. Ceza tutanağı veya karar örneği
+2. Tebliğ tarihini gösteren belge
+3. Deliller (fotoğraf, kayıt vb.)
+4. Kimlik fotokopisi
+
+Not: Bu metin örnektir; durumunuza göre uyarlayın, gerekirse avukata danışın."
+`;
+
+exports[`template tuketici-hakem-heyeti-basvurusu > matches the snapshot for sample data 1`] = `
+"10 Mart 2026
+
+ÖRNEK HEYETİN İL VEYA İLÇESİ TÜKETİCİ HAKEM HEYETİ BAŞKANLIĞI
+
+Konu: Tüketici uyuşmazlığı başvurusu (Karşı taraf: Örnek Karşı taraf (firma) adı)
+
+Karşı taraf: Örnek Karşı taraf (firma) adı
+Adresi: Örnek Karşı tarafın adresi
+
+Uyuşmazlığa konu olay şöyledir:
+
+Birinci paragraf: şikâyet konusu ığüşöçİ karakterleriyle yazıldı.
+
+İkinci paragraf: talep açıklaması.
+
+Karşı tarafa 10 Mart 2026 tarihinde yazılı olarak başvurdum, ancak talebim karşılanmamıştır.
+
+Talebim:
+
+Birinci paragraf: şikâyet konusu ığüşöçİ karakterleriyle yazıldı.
+
+İkinci paragraf: talep açıklaması.
+
+Uyuşmazlığın değeri 1.250 TL olup, 186.000 TL olan parasal sınırın altındadır.
+
+6502 sayılı Tüketicinin Korunması Hakkında Kanun'un 68. maddesi uyarınca başvurumun incelenerek karara bağlanmasını saygılarımla arz ederim.
+
+Saygılarımla,
+Ayşe Yılmaz
+
+T.C. Kimlik No: 10000000146
+Adres: Örnek Mah. Deneme Sok. No: 5 Çankaya / Ankara
+Telefon: 0532 123 45 67
+E-posta: ayse@ornek.com
+
+Ekler:
+1. Fatura veya satış belgesi
+2. Karşı tarafa yapılan başvuru ve varsa cevabı
+3. Olayı gösteren diğer belgeler
+4. Kimlik fotokopisi
+
+Not: Bu metin örnektir; durumunuza göre uyarlayın, gerekirse avukata danışın."
+`;
+
+exports[`template urun-iadesi-cayma > matches the snapshot for sample data 1`] = `
+"10 Mart 2026
+
+ÖRNEK SATICI FİRMA ADI
+İade ve Müşteri İlişkileri Birimi
+
+Konu: Cayma hakkının kullanılması (Sipariş no: Örnek Sipariş numarası)
+
+10 Mart 2026 tarihinde internet/uzaktan iletişim araçları ile firmanızdan sipariş verdim; ürünü 10 Mart 2026 tarihinde teslim aldım.
+Ürün: Örnek Ürün adı ve modeli
+Sipariş numarası: Örnek Sipariş numarası
+
+6502 sayılı Tüketicinin Korunması Hakkında Kanun'un 48. maddesi uyarınca, 14 gün içinde herhangi bir gerekçe göstermeksizin ve cezai şart ödemeksizin sözleşmeden cayma hakkıma sahibim. Bu yazı ile söz konusu sözleşmeden cayma hakkımı kullandığımı bildiririm.
+
+Ürünü kullanılmamış hâlde, ambalajı ve tüm aksesuarlarıyla birlikte iade etmeye hazırım. İade için kargo bilgisini veya iade kodunu bana bildirmenizi rica ederim.
+
+Ürün bedelinin ödemeyi yaptığım yöntemle bana iade edilmesini talep ederim.
+
+Saygılarımla,
+Ayşe Yılmaz
+
+T.C. Kimlik No: 10000000146
+Adres: Örnek Mah. Deneme Sok. No: 5 Çankaya / Ankara
+Telefon: 0532 123 45 67
+E-posta: ayse@ornek.com
+
+Ekler:
+1. Sipariş onayı veya fatura örneği
+
+Not: Bu metin örnektir; durumunuza göre uyarlayın, gerekirse avukata danışın."
+`;

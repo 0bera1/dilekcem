@@ -1,0 +1,119 @@
+/* The paper is always light, in both themes. */
+.paper {
+  --ink: #1a1a1f;
+  position: relative;
+  container-type: inline-size;
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  aspect-ratio: 1 / 1.414;
+  padding: 9% 9% 11%;
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid rgb(0 0 0 / 0.12);
+  border-radius: 3px;
+  box-shadow:
+    0 1px 2px rgb(0 0 0 / 0.14),
+    0 6px 14px rgb(0 0 0 / 0.1);
+}
+
+.fold {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  width: 9%;
+  aspect-ratio: 1;
+  background: linear-gradient(225deg, var(--desk) 50%, var(--fold) 50%);
+  box-shadow: -2px 2px 3px rgb(0 0 0 / 0.12);
+  border-bottom-left-radius: 3px;
+}
+
+.content {
+  font-family: var(--font-serif);
+  font-size: clamp(9px, 2.05cqw, 14.5px);
+  line-height: 1.55;
+  color: var(--ink);
+}
+
+.content p {
+  margin: 0;
+}
+
+.date {
+  text-align: right;
+  margin-bottom: 1.6em !important;
+}
+
+.muhatap {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 1.4em;
+}
+
+.konu {
+  margin-bottom: 1em !important;
+}
+
+.para {
+  margin-bottom: 0.8em !important;
+  white-space: pre-line;
+  text-align: left;
+}
+
+.closing {
+  margin-top: 1.4em;
+  text-align: right;
+}
+
+.sign {
+  font-weight: 700;
+}
+
+.contact {
+  margin-top: 1.4em;
+  font-size: 0.86em;
+  color: #4a4a52;
+}
+
+.ekler {
+  margin-top: 1em;
+  font-size: 0.86em;
+}
+
+.ekler ol {
+  margin: 0;
+  padding-left: 1.4em;
+}
+
+.ph {
+  background: #ffe9a8;
+  color: #3d2c00;
+  padding: 0 0.15em;
+  border-radius: 2px;
+}
+
+.stamp {
+  position: absolute;
+  right: 7%;
+  bottom: 5%;
+  transform: rotate(-12deg);
+  border: 0.35em solid #b3202a;
+  color: #b3202a;
+  opacity: 0.55;
+  border-radius: 0.4em;
+  padding: 0.15em 0.55em;
+  font-family: var(--font-ui);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  font-size: clamp(11px, 4.4cqw, 28px);
+  pointer-events: none;
+  user-select: none;
+}
+
+.disclaimer {
+  max-width: 640px;
+  margin: 12px auto 0;
+  font-size: 0.8125rem;
+  color: var(--muted);
+  text-align: center;
+}

@@ -1,0 +1,63 @@
+{
+  "baslangic": "alan",
+  "dugumler": [
+    {
+      "id": "alan",
+      "soru": "Sorununuz hangi alanda?",
+      "secenekler": [
+        { "etiket": "Satın aldığım ürün veya hizmet, banka, abonelik", "git": "tuketici" },
+        { "etiket": "Bir kamu kurumu veya belediye", "git": "kamu" },
+        { "etiket": "Kişisel verilerim veya istemediğim reklam mesajları", "git": "veri" },
+        { "etiket": "İş yerim veya okulum", "git": "is-okul" }
+      ]
+    },
+    {
+      "id": "tuketici",
+      "soru": "Ne oldu?",
+      "secenekler": [
+        { "etiket": "Aldığım ürün arızalı veya eksik çıktı", "sonuc": "ayipli-urun" },
+        { "etiket": "İnternetten aldım, vazgeçtim", "sonuc": "urun-iadesi-cayma" },
+        { "etiket": "Siparişim zamanında gelmedi", "sonuc": "gec-teslimat" },
+        { "etiket": "Kargo hasarlı geldi veya kayboldu", "sonuc": "kargo-hasari" },
+        { "etiket": "Bankam hesabımdan haksız kesinti yaptı", "sonuc": "banka-ucret-itirazi" },
+        { "etiket": "Aboneliğimi iptal etmek istiyorum", "sonuc": "abonelik-iptali" },
+        {
+          "etiket": "Firmaya başvurdum, sonuç alamadım",
+          "sonuc": "tuketici-hakem-heyeti-basvurusu"
+        }
+      ]
+    },
+    {
+      "id": "kamu",
+      "soru": "Ne yapmak istiyorsunuz?",
+      "secenekler": [
+        { "etiket": "Trafik cezasına itiraz etmek", "sonuc": "trafik-cezasi-itirazi" },
+        { "etiket": "Bir kurumdan bilgi veya belge istemek", "sonuc": "bilgi-edinme-basvurusu" },
+        { "etiket": "Belediye hizmetiyle ilgili şikâyet etmek", "sonuc": "belediye-sikayeti" },
+        { "etiket": "Genel bir şikâyet, talep veya öneri iletmek", "sonuc": "cimer-basvurusu" }
+      ]
+    },
+    {
+      "id": "veri",
+      "soru": "Ne yapmak istiyorsunuz?",
+      "secenekler": [
+        { "etiket": "Hakkımda hangi verilerin tutulduğunu öğrenmek", "sonuc": "kvkk-bilgi-talebi" },
+        { "etiket": "Verilerimin silinmesini istemek", "sonuc": "kvkk-silme-yok-etme-talebi" },
+        {
+          "etiket": "Reklam SMS, e-posta veya aramalarını durdurmak",
+          "sonuc": "ticari-ileti-onay-geri-cekme"
+        }
+      ]
+    },
+    {
+      "id": "is-okul",
+      "soru": "Ne yapmak istiyorsunuz?",
+      "secenekler": [
+        { "etiket": "İzin istemek", "sonuc": "izin-talebi" },
+        { "etiket": "İşten ayrılmak", "sonuc": "istifa-dilekcesi" },
+        { "etiket": "Okulda bir mazeretimi bildirmek", "sonuc": "mazeret-dilekcesi" },
+        { "etiket": "Bir belge istemek", "sonuc": "belge-talebi" }
+      ]
+    }
+  ]
+}

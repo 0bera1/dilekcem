@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dilekcem.beraekimci.com.tr/sitemap.xml
