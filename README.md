@@ -20,7 +20,7 @@ Hazır dilekçe ve başvuru metni sitesi. Kullanıcı sorununu seçer, birkaç s
 
 ## Kurulum
 
-Gereksinimler: Node 20 LTS veya üstü, npm.
+Gereksinimler: Node 24 LTS (en az 22), npm.
 
 ```bash
 npm ci
@@ -117,6 +117,7 @@ Token'lar yalnızca ortam değişkenlerindedir (`CF_API_TOKEN`, `GH_TOKEN`, `GH_
 
 ## Kararlar
 
+- **Node 24 LTS (en az 22).** Görev Node 20+ diyordu; Node 20 bakım ömrünü Nisan 2026'da doldurdu ve test ortamı jsdom 30'un bağımlılığı (undici) Node 20'de yüklenemiyor. CI ve dağıtım Node 24 kullanır, `engines` alanı `>=22` ister.
 - **React 18 + react-router-dom 6 + vite-react-ssg.** Şablon Vite'ın React 19'unu getiriyordu; vite-react-ssg `react-router-dom@^6` ister ve görev React 18 diyor. Bu yüzden ikisi sabitlendi. Dependabot bu ikisinin ana sürüm yükseltmelerini önermez.
 - **`npm audit` iki orta şiddetli bulgu verir (react-router 6).** Biri kullanıcı kaynaklı `<Link to>` ile açık yönlendirme, diğeri SSR hata serileştirmesidir; sitede kullanıcı kaynaklı `to` yoktur ve hydration verisi sabittir. Düzeltme React Router 7 gerektirir (vite-react-ssg desteklemiyor). Yüksek/kritik bulgu yoktur; `npm run audit` bunu zorunlu kılar.
 - **ESLint 9.** `eslint-plugin-jsx-a11y` henüz ESLint 10'u desteklemiyor.
