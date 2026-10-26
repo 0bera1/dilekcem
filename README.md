@@ -111,7 +111,7 @@ BASE_URL=https://dilekcem.beraekimci.com.tr npm run test:e2e:smoke   # canlı du
 2. Özel alan adı: `POST /accounts/{id}/pages/projects/dilekcem/domains` ile `dilekcem.beraekimci.com.tr`.
 3. Cloudflare DNS: `dilekcem` adlı **CNAME** kaydı, hedef `dilekcem.pages.dev`, **proxy açık**. Sertifikayı Cloudflare verir; HTTPS zorunludur (HTTP, 301 ile HTTPS'e yönlenir).
 
-Güvenlik başlıkları `public/_headers` ile gerçek HTTP başlığı olarak verilir: `Strict-Transport-Security`, `X-Content-Type-Options: nosniff`, `Referrer-Policy: no-referrer`, `Permissions-Policy`, `Content-Security-Policy: frame-ancestors 'none'`, `Cross-Origin-Opener-Policy`. Sayfaların kendi CSP'si meta etiketindedir.
+Güvenlik başlıkları `public/_headers` ile gerçek HTTP başlığı olarak verilir: `Strict-Transport-Security`, `X-Content-Type-Options: nosniff`, `Referrer-Policy: no-referrer`, `Permissions-Policy`, `Content-Security-Policy: frame-ancestors 'none'`, `Cross-Origin-Opener-Policy`. Sayfaların kendi CSP'si meta etiketindedir. `_headers` Cloudflare'in 404 yedek sayfasına uygulanmadığı için `functions/_middleware.ts` her yanıta `Cache-Control: no-transform` ekler; bu değer Cloudflare'in Web Analytics işaretçisini (üçüncü taraf betik) HTML'e enjekte etmesini engeller. `beraekimci.com.tr` bölgesinde hesap genelinde Web Analytics otomatik ekleme açık olduğundan bu önlem gereklidir; kapatmak isterseniz Cloudflare panelinde Web Analytics'te bu ana makineyi hariç tutabilirsiniz.
 
 CI (`ci.yml`) her push ve PR'da lint, tip kontrolü, testler, derleme, Playwright, Lighthouse ve gitleaks çalıştırır. `deploy.yml` ("Live smoke") canlı siteye elle veya haftalık duman testi çalıştırır. **CI'da Cloudflare token'ı kullanılmaz.**
 
