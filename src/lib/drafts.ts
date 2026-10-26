@@ -1,4 +1,3 @@
-import { z } from 'zod'
 import { getTemplate } from '../templates'
 import type { TemplateDef, Values } from '../templates/engine'
 import { readStorage, removeStorage, writeStorage } from './storage'
@@ -9,16 +8,30 @@ export const DRAFTS_ENABLED_KEY = 'dilekcem:drafts-enabled'
 /** Fields never written to storage, even when drafts are on. */
 const NEVER_STORED = new Set(['tckn'])
 
-export const draftSchema = z.object({
-  id: z.string().min(1).max(64),
-  slug: z.string().min(1).max(100),
-  title: z.string().max(200),
-  savedAt: z.string().max(40),
-  values: z.record(z.string().max(100), z.string().max(5000)),
-})
-export type Draft = z.infer<typeof draftSchema>
+export interface Draft {
+  id: string
+  slug: string
+  title: string
+  savedAt: string
+  values: Record<string, string>
+}
 
-const fileSchema = z.object({ version: z.literal(1), drafts: z.array(draftSchema).max(200) })
+const MAX_DRAFTS = 200
+
+const isString = (v: unknown, max: number): v is string => typeof v === 'string' && v.length <= max
+
+/** Strict shape check for data read from storage or an imported file. */
+function isDraft(v: unknown): v is Draft {
+  if (typeof v !== 'object' || v === null) return false
+  const d = v as Record<string, unknown>
+  if (!isString(d.id, 64) || d.id === '' || !isString(d.slug, 100) || d.slug === '') return false
+  if (!isString(d.title, 200) || !isString(d.savedAt, 40)) return false
+  if (typeof d.values !== 'object' || d.values === null || Array.isArray(d.values)) return false
+  return Object.entries(d.values).every(([k, val]) => isString(k, 100) && isString(val, 5000))
+}
+
+const isDraftList = (v: unknown): v is Draft[] =>
+  Array.isArray(v) && v.length <= MAX_DRAFTS && v.every(isDraft)
 
 export const draftsEnabled = (): boolean => readStorage(DRAFTS_ENABLED_KEY) === '1'
 
@@ -31,8 +44,8 @@ export function loadDrafts(): Draft[] {
   const raw = readStorage(DRAFTS_KEY)
   if (!raw) return []
   try {
-    const parsed = z.array(draftSchema).safeParse(JSON.parse(raw))
-    return parsed.success ? parsed.data.filter((d) => getTemplate(d.slug)) : []
+    const parsed: unknown = JSON.parse(raw)
+    return isDraftList(parsed) ? parsed.filter((d) => getTemplate(d.slug)) : []
   } catch {
     return []
   }
@@ -63,9 +76,11 @@ export function parseImport(text: string): ImportResult {
   } catch {
     return { ok: false, message: 'Dosya geçerli bir JSON değil.' }
   }
-  const parsed = fileSchema.safeParse(json)
-  if (!parsed.success) return { ok: false, message: 'Dosya Dilekçem taslak biçiminde değil.' }
-  const known = parsed.data.drafts.filter((d) => getTemplate(d.slug))
+  const file = json as { version?: unknown; drafts?: unknown } | null
+  if (!file || file.version !== 1 || !isDraftList(file.drafts)) {
+    return { ok: false, message: 'Dosya Dilekçem taslak biçiminde değil.' }
+  }
+  const known = file.drafts.filter((d) => getTemplate(d.slug))
   return { ok: true, drafts: known }
 }
 

@@ -1,5 +1,5 @@
 import kararAgaciJson from '../data/karar-agaci.json'
-import { kararAgaciSchema, type KararAgaci } from '../data/schema'
+import type { KararAgaci } from '../data/schema'
 import { compareTr, includesTr } from '../lib/tr'
 import abonelikIptali from './tuketici/abonelik-iptali'
 import ayipliUrun from './tuketici/ayipli-urun'
@@ -62,4 +62,4 @@ export const searchTemplates = (
 export const isVerified = (t: TemplateDef): boolean =>
   merciById.get(t.where.merciId)?.verified === true
 
-export const kararAgaci: KararAgaci = kararAgaciSchema.parse(kararAgaciJson)
+export const kararAgaci = kararAgaciJson as unknown as KararAgaci

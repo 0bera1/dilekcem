@@ -1,0 +1,84 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Type check
+        run: npm run typecheck
+
+      - name: Unit and component tests
+        run: npm test
+
+      - name: PDF and DOCX tests
+        run: npm run test:pdf
+
+      - name: Data checks
+        run: npm run check:data
+
+      - name: Dependency audit (production, high and above)
+        run: npm run audit
+
+      - name: Build
+        run: npm run build
+
+      - name: Link check
+        run: npm run check:links
+
+      - name: Install browser
+        run: npx playwright install --with-deps chromium
+
+      # Visual baselines are per platform; missing Linux baselines are written on the first run.
+      - name: End-to-end, accessibility, network privacy and visual tests
+        run: npx playwright test --update-snapshots=missing
+
+      - name: Lighthouse
+        run: npm run lighthouse
+
+      - name: Upload reports
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: reports
+          path: |
+            playwright-report
+            test-results
+            .lighthouseci
+            e2e/__screenshots__
+          retention-days: 7
+          if-no-files-found: ignore
+
+  secrets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: gitleaks/gitleaks-action@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

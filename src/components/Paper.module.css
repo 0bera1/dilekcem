@@ -99,7 +99,7 @@
   transform: rotate(-12deg);
   border: 0.35em solid #b3202a;
   color: #b3202a;
-  opacity: 0.55;
+  mix-blend-mode: multiply;
   border-radius: 0.4em;
   padding: 0.15em 0.55em;
   font-family: var(--font-ui);

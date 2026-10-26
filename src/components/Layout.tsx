@@ -21,7 +21,7 @@ function ThemeToggle() {
 
 function Brand() {
   return (
-    <Link to="/" className={s.brand} aria-label="Dilekçem, ana sayfa">
+    <Link to="/" className={s.brand}>
       <svg width="34" height="34" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
         <rect width="64" height="64" rx="14" fill="var(--accent)" />
         <path

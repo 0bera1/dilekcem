@@ -19,20 +19,18 @@ const run = (
 
 /** Multi-line text becomes one run per line with explicit breaks. */
 const lines = (text: string, o: Parameters<typeof run>[1] = {}): TextRun[] =>
-  text
-    .split('\n')
-    .map(
-      (l, i) =>
-        new TextRun({
-          text: l,
-          font: FONT,
-          size: o?.size ?? SIZE,
-          break: i === 0 ? 0 : 1,
-          ...(o?.bold ? { bold: true } : {}),
-          ...(o?.italics ? { italics: true } : {}),
-          ...(o?.color ? { color: o.color } : {}),
-        }),
-    )
+  text.split('\n').map(
+    (l, i) =>
+      new TextRun({
+        text: l,
+        font: FONT,
+        size: o?.size ?? SIZE,
+        break: i === 0 ? 0 : 1,
+        ...(o?.bold ? { bold: true } : {}),
+        ...(o?.italics ? { italics: true } : {}),
+        ...(o?.color ? { color: o.color } : {}),
+      }),
+  )
 
 export function buildDocxDocument(letter: Letter): Document {
   const para = (

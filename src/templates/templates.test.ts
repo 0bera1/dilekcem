@@ -14,9 +14,9 @@ import {
   merciById,
   renderLetter,
   resolveTokens,
-  templateMetaSchema,
 } from './engine'
 import { getTemplate, kararAgaci, searchTemplates, templates } from './index'
+import { templateMetaSchema } from './meta-schema'
 
 const EXPECTED = [
   'abonelik-iptali',

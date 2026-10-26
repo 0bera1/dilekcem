@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
+import { prefetchExporters } from '../export/prefetch'
 import { toIsoDate } from '../lib/dates'
 import { computeDeadlines } from '../lib/deadline'
 import { downloadBlob, downloadText } from '../lib/download'
@@ -156,6 +157,7 @@ export function Workbench({ def }: { def: TemplateDef }) {
         </h2>
         <form
           noValidate
+          onFocusCapture={prefetchExporters}
           onSubmit={(e) => {
             e.preventDefault()
             void exportPdf()

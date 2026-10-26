@@ -2,10 +2,11 @@
 // directory URLs serve index.html, unknown paths serve 404.html with status 404.
 import { createReadStream, existsSync, statSync } from 'node:fs'
 import { createServer } from 'node:http'
+import { createGzip } from 'node:zlib'
 import { extname, join, normalize, resolve } from 'node:path'
 
 const ROOT = resolve('dist')
-const PORT = Number(process.env.PORT ?? 4173)
+const PORT = Number(process.env.PORT ?? 4175)
 const TYPES = {
   '.html': 'text/html; charset=utf-8',
   '.js': 'text/javascript; charset=utf-8',
@@ -30,9 +31,15 @@ createServer((req, res) => {
   const file = resolveFile(req.url ?? '/')
   const status = file ? 200 : 404
   const target = file ?? join(ROOT, '404.html')
+  const type = TYPES[extname(target)] ?? 'application/octet-stream'
+  const compress =
+    /text|javascript|json|xml|svg/.test(type) && /gzip/.test(req.headers['accept-encoding'] ?? '')
   res.writeHead(status, {
-    'content-type': TYPES[extname(target)] ?? 'application/octet-stream',
+    'content-type': type,
     'cache-control': 'no-store',
+    ...(compress ? { 'content-encoding': 'gzip', vary: 'accept-encoding' } : {}),
   })
-  createReadStream(target).pipe(res)
+  const stream = createReadStream(target)
+  if (compress) stream.pipe(createGzip()).pipe(res)
+  else stream.pipe(res)
 }).listen(PORT, () => console.log(`serving dist on http://localhost:${PORT}`))

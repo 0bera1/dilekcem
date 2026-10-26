@@ -44,8 +44,8 @@ export default function Home() {
       <section className={s.hero}>
         <h1 className={s.h1}>Sorununu seç, dilekçen hazır olsun</h1>
         <p className={s.lead}>
-          Birkaç soruyu yanıtla; resmî dille yazılmış metin sağdaki kâğıtta anında belirsin. Nereye,
-          ne zaman ve hangi belgelerle başvuracağını da gör. Yazdıkların cihazından çıkmaz.
+          Birkaç soruyu yanıtla; resmî dille yazılmış metin kâğıt önizlemesinde anında belirsin.
+          Nereye, ne zaman ve hangi belgelerle başvuracağını da gör. Yazdıkların cihazından çıkmaz.
         </p>
       </section>
 

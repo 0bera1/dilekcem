@@ -1,13 +1,6 @@
-import { z } from 'zod'
 import mevzuatJson from '../data/mevzuat.json'
 import merciJson from '../data/merciler.json'
-import {
-  merciListSchema,
-  mevzuatListSchema,
-  type Merci,
-  type Mevzuat,
-  type Sure,
-} from '../data/schema'
+import type { Merci, Mevzuat, Sure } from '../data/schema'
 import { formatLongDate } from '../lib/dates'
 import type { FieldType } from '../lib/validation'
 
@@ -25,18 +18,17 @@ export const CATEGORIES: { id: CategoryId | 'rehber'; label: string }[] = [
   { id: 'rehber', label: 'Rehber' },
 ]
 
-export const fieldSchema = z.object({
-  id: z.string().regex(/^[a-zA-Z][a-zA-Z0-9]*$/),
-  label: z.string().min(1),
-  type: z.enum(['text', 'textarea', 'email', 'tel', 'date', 'tckn', 'number', 'select']),
-  required: z.boolean(),
-  step: z.union([z.literal(1), z.literal(2), z.literal(3)]),
-  hint: z.string().optional(),
-  placeholder: z.string().optional(),
-  maxLength: z.number().int().positive().optional(),
-  options: z.array(z.object({ value: z.string(), label: z.string() })).optional(),
-})
-export type Field = Omit<z.infer<typeof fieldSchema>, 'type'> & { type: FieldType }
+export interface Field {
+  id: string
+  label: string
+  type: FieldType
+  required: boolean
+  step: 1 | 2 | 3
+  hint?: string
+  placeholder?: string
+  maxLength?: number
+  options?: { value: string; label: string }[]
+}
 
 export type Values = Record<string, string>
 
@@ -85,21 +77,6 @@ export interface TemplateDef {
   related: string[]
   reminders?: Reminder[]
 }
-
-/** Validates the data part of a definition (functions are checked by tests). */
-export const templateMetaSchema = z.object({
-  slug: z.string().regex(/^[a-z0-9]+(-[a-z0-9]+)*$/),
-  title: z.string().min(3),
-  category: z.enum(['tuketici', 'kamu', 'kisisel-veri', 'is-okul']),
-  description: z.string().min(20).max(300),
-  fields: z.array(fieldSchema).min(1),
-  where: z.object({ merciId: z.string().min(1) }),
-  faq: z.array(z.object({ q: z.string().min(5), a: z.string().min(10) })).min(2),
-  related: z.array(z.string()),
-  reminders: z
-    .array(z.object({ fromField: z.string(), sureId: z.string(), title: z.string() }))
-    .optional(),
-})
 
 /** Sender / date fields shared by every template. */
 export const COMMON_FIELDS: Field[] = [
@@ -160,10 +137,12 @@ export interface Letter {
   uyari: string
 }
 
-const mevzuat: Mevzuat[] = mevzuatListSchema.parse(mevzuatJson)
+// The JSON files are validated against their zod schemas by the tests and `npm run check:data`,
+// so the browser bundle does not need to ship zod.
+const mevzuat = mevzuatJson as unknown as Mevzuat[]
 const mevzuatById = new Map(mevzuat.map((m) => [m.id, m]))
 
-export const merciler: Merci[] = merciListSchema.parse(merciJson)
+export const merciler = merciJson as unknown as Merci[]
 export const merciById = new Map(merciler.map((m) => [m.id, m]))
 
 const UNIT: Record<Sure['birim'], string> = {
