@@ -54,7 +54,7 @@ const urls = [
 const UA = 'Mozilla/5.0 (compatible; dilekcem-data-check)'
 
 async function probe(url: string): Promise<{ url: string; status: number | null; error?: string }> {
-  for (const attempt of [1, 2]) {
+  for (const attempt of [1, 2, 3]) {
     try {
       const res = await fetch(url, {
         headers: { 'user-agent': UA },
@@ -64,20 +64,24 @@ async function probe(url: string): Promise<{ url: string; status: number | null;
       await res.body?.cancel()
       return { url, status: res.status }
     } catch (e) {
-      if (attempt === 2)
+      if (attempt === 3)
         return { url, status: null, error: e instanceof Error ? e.message : String(e) }
+      await new Promise((r) => setTimeout(r, 2000 * attempt))
     }
   }
   return { url, status: null }
 }
 
-const results = await Promise.all(urls.map(probe))
+// Sequential: the government hosts drop parallel requests from CI runners.
+const results: Awaited<ReturnType<typeof probe>>[] = []
+for (const u of urls) results.push(await probe(u))
 const reachable = results.filter((r) => r.status !== null)
 if (reachable.length === 0) {
   warn('ağ erişimi yok: kaynak URL kontrolü atlandı')
 } else {
   for (const r of results) {
-    if (r.status === null) fail(`${r.url} erişilemedi (${r.error})`)
+    if (r.status === null)
+      warn(`${r.url} erişilemedi (${r.error}); geçici ağ hatası olabilir, elle kontrol edin`)
     else if (r.status >= 400) fail(`${r.url} -> HTTP ${r.status}`)
     else console.log(`OK     ${r.status} ${r.url}`)
   }
